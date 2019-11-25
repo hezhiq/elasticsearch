@@ -7,7 +7,7 @@ import org.springframework.data.elasticsearch.annotations.FieldType;
 
 /**
  * created by hezq on 2019/11/22
- */
+ */              //索引名
 @Document(indexName = "lol", type = "docs", shards = 1, replicas = 0)
 public class LoLEs {
 

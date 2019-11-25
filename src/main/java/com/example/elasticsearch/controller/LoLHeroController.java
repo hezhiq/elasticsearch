@@ -17,10 +17,8 @@ import javax.annotation.Resource;
  */
 @RestController
 public class LoLHeroController {
-
     @Resource
     private LOLEsRespository lolEsRespository;
-
     /**
      * 创建英雄
      * @Author hezq
@@ -40,9 +38,7 @@ public class LoLHeroController {
         loLEs.setHeroName(heroName);
         return lolEsRespository.save(loLEs).toString();
     }
-
     private String names;
-
     @GetMapping("/get")
     public String get() {
         names = "";
@@ -52,9 +48,7 @@ public class LoLHeroController {
         });
         return names;
     }
-
     private String searchs = "";
-
     @GetMapping("/search")
     public String search(@RequestParam("searchKey") String searchKey) {
         searchs = "";
